@@ -7,22 +7,31 @@ body {
   color: var(--text-dark);
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 0;
 }
 
 /*BASIC COMPONENTS*/
 
-.container {
-
-}
+/*.container {
+}*/
 
 .row {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
   text-align: center;
   padding: 13px 24px;
   border-radius: 25px;
+  max-width: 320px;
 }
 
 /*MODIFIERS*/
@@ -35,8 +44,51 @@ body {
 
 /*CUSTOM COMPONENTS*/
 
+.carousel-hero__container {
+  position: relative;
+  color: var(--text-light);
+}
+
+.carousel-hero__slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-grow: 1;
+  padding: 48px 24px;
+}
+
+.carousel-hero__text-container {
+  grid-column: 1/3;
+  padding: 48px 24px;
+}
+
 .carousel-hero__headline {
   color: var(--text-light);
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+}
+
+.carousel-hero__content {
+  padding-top: 20px;
+}
+
+.carousel-hero__nav {
+  position: sticky;
+  bottom: 10px;
+  color: var(--text-dark);
+}
+
+.slide-first {
+  background-image: url('https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/SG/optimized/banner/banner-fashion.jpg');
+}
+
+.slide-second {
+  display: none;
+}
+
+.slide-third {
+  display: none;
 }
