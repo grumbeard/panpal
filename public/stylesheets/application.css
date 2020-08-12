@@ -1,0 +1,42 @@
+@import "_colors.css";
+
+/*THEME*/
+
+body {
+  background-color: white;
+  color: var(--text-dark);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/*BASIC COMPONENTS*/
+
+.container {
+
+}
+
+.row {
+
+}
+
+.button {
+  text-align: center;
+  padding: 13px 24px;
+  border-radius: 25px;
+}
+
+/*MODIFIERS*/
+
+.blue {
+  background-color: var(--blue);
+  color: var(--text-light);
+}
+
+
+/*CUSTOM COMPONENTS*/
+
+.carousel-hero__headline {
+  color: var(--text-light);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
