@@ -3,8 +3,13 @@
 /*TEXT COLORS*/
 --text-dark: #4a4a4a;
 --text-light: white;
+--brand-hover: #7c5295;
+--brand-main: #9932CC;
 
 /*BUTTON COLORS*/
---blue: #0070ba;
+--brand-light: #bb88bd;/*#0070ba;*/
+
+/*SECTION BACKGROUND COLORS*/
+--grey: #f5f7fa;
 
 }
