@@ -17,7 +17,6 @@
     <script defer src="/__/firebase/7.17.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-
   </head>
   <body>
     <!-- Nav Bar -->
@@ -26,46 +25,55 @@
         <img src="/../assets/panpal-logo.png" class="logo">
       </div>
       <div class="navbar-center">
-        <a href="/">personal</a>
-        <a href="/">business</a>
-        <a href="/">partners</a>
-        <a href="/">help & FAQ</a>
+        <ul class="main-nav">
+          <a href="/"><li>personal</li></a>
+          <a href="/"><li>business</li></a>
+          <a href="/"><li>partners</li></a>
+          <a href="/"><li>help & FAQ</li></a>
+        </ul>
       </div>
       <div class="navbar-right">
-        <div class="button button-nav brand-light-outline">log in</div>
-        <div class="button button-nav brand-light">sign up</div>
+        <div class="button button-nav brand-light-outline">LOG IN</div>
+        <div class="button button-nav brand-light">SIGN UP</div>
+      </div>
+      <div class="navbar-right__mobile">
+        <span class="navbar-toggle__mobile button button-nav brand-light-outline" id="js-navbar-toggle">menu</span>
+      </div>
+      <div class="navbar-center__mobile">
+        <ul class="main-nav__mobile" id="js-menu">
+          <a href="/"><li>personal</li></a>
+          <a href="/"><li>business</li></a>
+          <a href="/"><li>partners</li></a>
+          <a href="/"><li>help & FAQ</li></a>
+          <a href="/"><li>login</li></a>
+          <a href="/"><li>sign up</li></a>
+        </ul>
       </div>
     </section>
     <!-- Carousel for Hero Images -->
-    <section class="carousel-hero__container">
-      <div class="row">
-        <div class="carousel-hero__slide slide-first active-slide">
-          <div class="carousel-hero__text-container">
-            <h1 class="carousel-hero__headline">Taste the world with your new friend <span class="brand-main">PanPal</span></h1>
-            <p class="carousel-hero__paragraph">Satisfy every craving for a lifetime with unlimited meals across all cuisines — all without having to leave your home*</p>
-            <div class="button brand-light">View meal plans</div>
-          </div>
-        </div>
-        <div class="carousel-hero__slide slide-second">
-          <div class="carousel-hero__text-container">
-            <h1 clsas="carousel-hero__headline">Style Made Simple with PanPal</h1>
-            <p class="carousel-hero__paragraph">If you need to return or exchange a purchase, we can cover your return shipping costs*.</p>
-          </div>
-        </div>
-        <div class="carousel-hero__slide slide-third">
-          <div class="carousel-hero__text-container">
-            <h1 clsas="carousel-hero__headline">Style Made Simple with PanPal</h1>
-            <p class="carousel-hero__paragraph">If you need to return or exchange a purchase, we can cover your return shipping costs*.</p>
-          </div>
+    <section class="container__hero carousel-container">
+      <div class="carousel-hero__slide js-slide-first js-active-slide">
+        <div class="text-container__hero">
+          <h1 class="headline-text__hero">Taste the world with your new friend <span class="brand-main">PanPal</span></h1>
+          <p class="paragraph-text__hero">Satisfy every craving for a lifetime with unlimited meals across all cuisines — all without having to leave your home*</p>
+          <div class="button brand-light">View meal plans</div>
         </div>
       </div>
-      <div class="row">
-        <div class="carousel-hero__nav">
-          <div class="row">
-            <div class="carousel-hero carousel-button"> < </div>
-            <div class="carousel-hero carousel-button"> > </div>
-          </div>
+      <div class="carousel-hero__slide js-slide-second">
+        <div class="text-container__hero">
+          <h1 class="headline-text__hero text-bold">Nothing's more refreshing than <span class="brand-main">Something New</span></h1>
+          <div class="button brand-light">Sign up now</div>
         </div>
+      </div>
+      <div class="carousel-hero__slide js-slide-third">
+        <div class="text-container__hero">
+          <h1 class="headline-text__hero">All the flavors you've only <span class="brand-light">Dreamed About</span></h1>
+        </div>
+      </div>
+      <div class="carousel-hero__nav">
+        <div class="js-carousel-button js-active-button" id="js-slide1-nav-btn"></div>
+        <div class="js-carousel-button" id="js-slide2-nav-btn"></div>
+        <div class="js-carousel-button" id="js-slide3-nav-btn"></div>
       </div>
     </section>
 
@@ -80,7 +88,7 @@
         See how PanPal works
       </h2>
       <div class="text-center video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mhDJNfV7hjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/mhDJNfV7hjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video__landing"></iframe>
       </div>
       <div class="row panels-container">
         <div class="panel-container">
@@ -202,45 +210,40 @@
     </section>
 
     <!-- Section 4: New Feature -->
-    <section class="container hero-container section__feature" id="one-touch">
-      <div class="hero-text-container__left">
-            <h2 clsas="hero-text__headline">Checkout with a touch</h2>
-            <span class="hero-text__paragraph">Skip the PanPal login on future purchases when you activate PanPal One Touch. Now you can shop all the things you love faster than ever.</span>
-            <p><a href="/" class="text-white">More about PanPal One Touch</a></p>
-          </div>
+    <section class="container__hero section__feature" id="one-touch">
+      <div class="text-container__hero">
+        <h2 class="headline-text__hero">Checkout with a touch</h2>
+        <span class="paragraph-text__hero">Skip the PanPal login on future purchases when you activate PanPal One Touch. Now you can shop all the things you love faster than ever.</span>
+        <p><a href="/" class="text-white">More about PanPal One Touch</a></p>
+      </div>
     </section>
 
     <!-- Section 5: Customer Logos -->
     <section class="container">
       <h2 class="section-header">Millions of foodies use PanPal</h2>
       <div class="avatars-container">
-        <div class="row">
           <img src="/../assets/lady-topdown-sunglasses.jpg" alt="" class="logo__customer avatar-circle">
           <img src="/../assets/lady-close-up.jpg" alt="" class="logo__customer avatar-circle">
           <img src="/../assets/lady-face-color-wall.jpg" alt="" class="logo__customer avatar-circle">
           <img src="/../assets/girl-forest-close-up.jpg" alt="" class="avatar-circle">
-        </div>
-        <div class="row">
           <img src="/../assets/man-happy.jpg" alt="" class="avatar-circle">
           <img src="/../assets/lady-close-up-2.jpg" alt="" class="avatar-circle">
           <img src="/../assets/man-close-up.jpg" alt="" class="avatar-circle">
           <img src="/../assets/man-center-europe.jpg" alt="" class="avatar-circle">
-        </div>
       </div>
-
       <!-- Text Banner -->
-      <section class="banner text-center">
+      <div class="banner text-center">
         <h4><a href="/" class="text-brand-light">Find out more</a></h4>
-      </section>
+      </div>
     </section>
 
     <!-- Section 6: New Feature 2 -->
-    <section class="container hero-container section__feature" id="automatic-payments">
-      <div class="hero-text-container__left">
-            <h2 clsas="hero-text__headline">Manage your recurring payments easily</h2>
-            <span class="hero-text__paragraph">Whether it's monthly subscriptions, recurring bills or instalment plans, it's a lot easier to keep track and manage your recurring payments with Automatic Payments</span>
-            <p><a href="/" class="text-white">Learn more</a></p>
-          </div>
+    <section class="container__hero section__feature" id="automatic-payments">
+      <div class="text-container__hero">
+        <h2 class="headline-text__hero">Manage your recurring payments easily</h2>
+        <span class="paragraph-text__hero">Whether it's monthly subscriptions, recurring bills or instalment plans, it's a lot easier to keep track and manage your recurring payments with Automatic Payments</span>
+        <p><a href="/" class="text-white">Learn more</a></p>
+      </div>
     </section>
 
     <!-- Section 7: Enterprise -->
@@ -255,5 +258,6 @@
       <h2 class="section-header">Transform how you do meals</h2>
       <div class="button brand-light center-item">Sign Up Now</div>
     </section>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
