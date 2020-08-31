@@ -462,6 +462,12 @@ a:hover {
   margin: 32px;
 }
 
+@media (max-width: 600px) {
+  .avatars-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
 .avatar-circle {
   height: 200px;
   width: 200px;
@@ -469,4 +475,11 @@ a:hover {
   border-radius: 50%;
   filter: drop-shadow(0 0 0.75rem #cdcdcd);
   margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .avatar-circle {
+    height: 100px;
+    width: 100px;
+  }
 }
